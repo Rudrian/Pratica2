@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class NumerosMaioresQueOitoWhile {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+        int contador = 0;
+        int i = 0;
+
+        System.out.println("Digite 20 números:");
+
+        while (i < 20) {
+            System.out.print("Número " + (i + 1) + ": ");
+            int numero = ler.nextInt();
+
+            if (numero > 8) {
+                contador++;
+            }
+
+            i++; // Incrementa o contador de iterações
+        }
+
+        System.out.println("Quantidade de números maiores que 8: " + contador);
+
+        ler.close();
+    }
+}
