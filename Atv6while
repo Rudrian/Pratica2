@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Pratica11While {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+
+        int idade, soma = 0, media = 0, maior = 0, menor = 0;
+        int i = 1;
+
+        while (i <= 20) {
+            System.out.println("Informe a idade da pessoa " + i + ": ");
+            idade = ler.nextInt();
+            soma += idade;
+            if (idade >= 18) {
+                maior++;
+            } else {
+                menor++;
+            }
+            i++;
+        }
+
+        media = soma / 20;
+        System.out.println("A soma de todas as idades é: " + soma);
+        System.out.println("A média das idades é: " + media);
+        System.out.println("O número de pessoas maiores de idade é: " + maior);
+        System.out.println("O número de pessoas menores de idade é: " + menor);
+        
+        ler.close();
+    }
+}
